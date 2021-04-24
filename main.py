@@ -17,8 +17,9 @@ def get_alp2020(len):
 m = get_alp2020(base_len).rotateY(deg(90)).forw((base_width - 20) / 2 )
 m += m.mirrorX()
 # поперечная часть основы:
-t = get_alp2020(base_width - 20*2).rotateX(deg(90)).left((base_len - 20) / 2 )
-t += t.mirrorY()
+#t = get_alp2020(base_width - 20*2).rotateX(deg(90)).left((base_len - 20) / 2 )
+#t += t.mirrorY()
+t = get_alp2020(base_width - 20*2).rotateX(deg(90))
 m += t
 # стойки опор:
 t = get_alp2020(total_height - 20*2).up((total_height - 20) / 2).forw((base_width - 20) / 2 )
