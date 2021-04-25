@@ -6,7 +6,7 @@ from zencad import *
 base_len = 180
 base_width = 176.5
 total_height = 143
-supp_len = 50
+supp_len = 20 + 20*2
 
 alp2020l = from_brep('./brep/alp2020almk.brep').left(47.4).back(75.2)
 
@@ -17,8 +17,6 @@ def get_alp2020(len):
 m = get_alp2020(base_len).rotateY(deg(90)).forw((base_width - 20) / 2 )
 m += m.mirrorX()
 # поперечная часть основы:
-#t = get_alp2020(base_width - 20*2).rotateX(deg(90)).left((base_len - 20) / 2 )
-#t += t.mirrorY()
 t = get_alp2020(base_width - 20*2).rotateX(deg(90))
 m += t
 # стойки опор:
